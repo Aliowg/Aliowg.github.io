@@ -63,23 +63,29 @@
 <h3 id="返回json"><a href="#返回json" class="headerlink" title="返回json"></a>返回json</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;msg&quot;:&quot;查询成功！&quot;,&quot;flag&quot;:&quot;00&quot;,&quot;sensorLastDataList&quot;:[&#123;&quot;unit&quot;:&quot;mg/L&quot;,&quot;sensorName&quot;:&quot;溶解氧&quot;,&quot;updateTime&quot;:&quot;2019-11-11 09:39:28&quot;,&quot;value&quot;:&quot;20.00&quot;,&quot;sensorId&quot;:&quot;200180039&quot;&#125;,&#123;&quot;unit&quot;:&quot;mg/L&quot;,&quot;sensorName&quot;:&quot;氨氮&quot;,&quot;updateTime&quot;:&quot;2019-11-11 09:39:28&quot;,&quot;value&quot;:&quot;99.90&quot;,&quot;sensorId&quot;:&quot;200180040&quot;&#125;,&#123;&quot;unit&quot;:&quot;pH&quot;,&quot;sensorName&quot;:&quot;PH&quot;,&quot;updateTime&quot;:&quot;2019-11-11 09:39:28&quot;,&quot;value&quot;:&quot;6.45&quot;,&quot;sensorId&quot;:&quot;200180041&quot;&#125;,&#123;&quot;unit&quot;:&quot;mv&quot;,&quot;sensorName&quot;:&quot;氧化还原电位&quot;,&quot;updateTime&quot;:&quot;2019-11-11 09:39:28&quot;,&quot;value&quot;:&quot;501.00&quot;,&quot;sensorId&quot;:&quot;200180042&quot;&#125;],&quot;deviceId&quot;:&quot;200027682&quot;,&quot;deviceName&quot;:&quot;大船2&quot;,&quot;userId&quot;:&quot;200000706&quot;&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="构建过程"><a href="#构建过程" class="headerlink" title="构建过程"></a>构建过程</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li>构建SpringMVC框架<blockquote>
-<p>使用IDEA构建，导入相关类库，设置控制器Controller,修改配置文件等</p>
-</blockquote>
-</li>
-<li>构建http api服务<blockquote>
-<p>设置被访问时，Model向View传的值类型。本项目是返回从Tlink抓取的数据</p>
-</blockquote>
-</li>
-<li>解决跨域问题<blockquote>
-<p>使用注解@CrossOrigin 解决跨域问题,Spring Framework 版本要高于4.2</p>
-</blockquote>
-</li>
-<li>部署项目<blockquote>
-<p>打包war，通过tomcat部署到相应端口</p>
-</blockquote>
-</li>
+<li>构建SpringMVC框架</li>
 </ol>
+<ul>
+<li>使用IDEA构建，导入相关类库，设置控制器Controller,修改配置文件等</li>
+</ul>
+<ol start="2">
+<li>构建http api服务</li>
+</ol>
+<ul>
+<li>设置被访问时，Model向View传的值类型。本项目是返回从Tlink抓取的数据</li>
+</ul>
+<ol start="3">
+<li>解决跨域问题</li>
+</ol>
+<ul>
+<li>使用注解@CrossOrigin 解决跨域问题,Spring Framework 版本要高于4.2</li>
+</ul>
+<ol start="4">
+<li>部署项目</li>
+</ol>
+<ul>
+<li>打包war，通过tomcat部署到相应端口</li>
+</ul>
 <h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
       </div>
     </div>
