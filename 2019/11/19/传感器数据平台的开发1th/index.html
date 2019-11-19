@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>传感器数据平台的开发1th | Aliowg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="百纳生态研究院">
+  <meta name="keywords" content>
+  <meta name="description" content>
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '1.4.5',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: '-'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "endless-river",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300|Noto+Serif+SC&amp;display=swap">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+</head>
+<body>
+<div class="single">
+<div id="page">
+<div id="lx-aside" style="background-image: url(/images/page-cover.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/person_1.jpg"></a></div>
+    <span>2019-11-19</span>
+    <h2>传感器数据平台的开发1th</h2>
+    
+    </div>
+</div>
+</div>
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="使用jQuery封装的Ajax从http-api获取数据并渲染到页面-用bootstrap写前端页面"><a href="#使用jQuery封装的Ajax从http-api获取数据并渲染到页面-用bootstrap写前端页面" class="headerlink" title="使用jQuery封装的Ajax从http api获取数据并渲染到页面,用bootstrap写前端页面"></a>使用jQuery封装的Ajax从http api获取数据并渲染到页面,用bootstrap写前端页面</h2><h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p><img src="https://raw.githubusercontent.com/Aliowg/img-folder/master/data1.png" alt="Image text"></p>
+<h1 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h1><ul>
+<li>html + javaScript + css</li>
+<li>bootstrap 4.0.0</li>
+<li>jQuery 3.2.1</li>
+<li>Ajax</li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;bnst&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;index.css&quot; &gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav class=&quot;navbar navbar-expand-md bg-light navbar-light&quot;&gt;
+    &lt;!-- Logo --&gt;
+    &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;
+    &lt;img src=&quot;imge/bnicon.png&quot; alt=&quot;logo&quot;&gt;Ship Platform
+    &lt;/a&gt;
+    &lt;!-- 定义折叠按钮 --&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggler&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#nav-menu&quot;&gt;
+    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;!-- 把菜单包含在容器内 &lt;--&gt;&lt;/--&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;nav-menu&quot;&gt;
+    &lt;ul class=&quot;navbar-nav ml-auto&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;img src=&quot;imge/callme.png&quot; alt=&quot;user&quot;&gt;Call me&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;img src=&quot;imge/device.png&quot; alt=&quot;user&quot;&gt;mydrvice&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link disabled&quot;&gt;&lt;img src=&quot;imge/user.png&quot; alt=&quot;user&quot;&gt;user&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+    &lt;div class=&quot;device&quot;&gt;
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;user1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;user2&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;user3&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;data1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;data2&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;data3&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;col-xd-12&quot;&gt;&lt;span id=&quot;data4&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 新 Bootstrap4 核心 CSS 文件 --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css&quot;&gt;
+    &lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- popper.min.js 用于弹窗、提示、下拉菜单 --&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- 最新的 Bootstrap4 核心 JavaScript 文件 --&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    // 访问api，数据插入到reslut中
+    //jquery function
+    $(function(){
+        $.ajax({
+            //请求方式
+            type : &quot;GET&quot;,
+            //修改为同步
+            async: false,
+            //请求的媒体类型
+            contentType: &quot;application/jsonp;charset=UTF-8&quot;,
+            //请求地址
+            url : &apos;http://www.szbnst.com:8080/api/getTlinkData/NU3W3550GLMZUE68&apos;,
+            //请求成功
+            success : function(result) {
+                console.log(result);
+                //首先将数据全部保存起来
+                var dataObj = JSON.parse(result);
+                // $(&apos;#user1&apos;).text(&apos;查询状态: &apos;+dataObj.msg);
+                $(&apos;#user2&apos;).text(&apos;id: &apos;+dataObj.deviceId);
+                $(&apos;#user3&apos;).text(&apos;Name: &apos;+dataObj.deviceName);
+                //定义一个switch
+                $(&apos;#data1&apos;).text(&apos;deviceName: &apos;+dataObj.sensorLastDataList[0].sensorName);
+                $(&apos;#data2&apos;).text(&apos;unit: &apos;+dataObj.sensorLastDataList[0].unit);
+                $(&apos;#data3&apos;).text(&apos;time: &apos;+dataObj.sensorLastDataList[0].updateTime);
+                $(&apos;#data4&apos;).text(&apos;value: &apos;+dataObj.sensorLastDataList[0].value);
+            },
+            //请求失败，包含具体的错误信息
+            error : function(e){
+                console.log(e.status);
+                console.log(e.responseText);
+                console.log(&apos;Error&apos;);
+            }
+        });
+    })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(/images/footer_1.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="#">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>没有更新的文章</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(/images/footer_2.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2019/11/15/使用Spring-MVC构建http-api/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>使用Spring MVC构建http api</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Aliowg</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.blleng.cn" target="_blank">Lx</a><br>
+  </div>
+</footer>
+</div>
+
+<button class="menu-trigger"></button>
+<div class="menu">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/person_1.jpg" alt="百纳生态研究院"></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>百纳生态研究院</p>
+          <span class="tagline">Ywg</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/guestbook">留言</a></li>
+        <li><a href="/about">关于</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>友链</span>
+        <ul>
+          <li> <a href="https://lx.blleng.cn" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.stellar.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
