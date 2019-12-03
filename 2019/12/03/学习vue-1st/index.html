@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>传感器数据平台的开发2th | Aliowg</title>
+  <title>学习vue 1st | Aliowg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="百纳生态研究院">
   <meta name="keywords" content>
@@ -48,8 +48,8 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="/images/person_1.jpg"></a></div>
-    <span>2019-11-21</span>
-    <h2>传感器数据平台的开发2th</h2>
+    <span>2019-12-03</span>
+    <h2>学习vue 1st</h2>
     
     </div>
 </div>
@@ -58,14 +58,42 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="使用jQuery封装的Ajax从http-api获取数据并渲染到页面-用bootstrap写前端页面"><a href="#使用jQuery封装的Ajax从http-api获取数据并渲染到页面-用bootstrap写前端页面" class="headerlink" title="使用jQuery封装的Ajax从http api获取数据并渲染到页面,用bootstrap写前端页面"></a>使用jQuery封装的Ajax从http api获取数据并渲染到页面,用bootstrap写前端页面</h2><h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p><img src="https://raw.githubusercontent.com/Aliowg/blogimges/master/2019-11-21/gettlink-2th-1.png" alt="Image text"><br><img src="https://raw.githubusercontent.com/Aliowg/blogimges/master/2019-11-21/gettlink-2th-2.png" alt="Image text"><br><img src="https://raw.githubusercontent.com/Aliowg/blogimges/master/2019-11-21/gettlink-2th-3.png" alt="Image text"><br><img src="https://raw.githubusercontent.com/Aliowg/blogimges/master/2019-11-21/gettlink-2th-4.png" alt="Image text"><br><img src="https://raw.githubusercontent.com/Aliowg/blogimges/master/2019-11-21/gettlink-2th-5.png" alt="Image text"></p>
-<h1 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h1><ul>
-<li>html + javaScript + css</li>
-<li>bootstrap 4.0.0</li>
-<li>jQuery 3.2.1</li>
-<li>Ajax</li>
+        <h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><ul>
+<li>vue项目初始化</li>
+<li>vue文件结构</li>
+<li>模板语法</li>
+<li>指令<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1></li>
+<li>电脑系统：windos7 x64</li>
+<li>vue ide：VsCode + Vetur</li>
 </ul>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a><a href="https://github.com/Aliowg/getTlink" target="_blank" rel="noopener">项目地址</a></h2>
+<h2 id="vue项目初始化：使用vue-cli命令行工具快速搭建vue项目"><a href="#vue项目初始化：使用vue-cli命令行工具快速搭建vue项目" class="headerlink" title="vue项目初始化：使用vue-cli命令行工具快速搭建vue项目"></a>vue项目初始化：使用vue-cli命令行工具快速搭建vue项目</h2><pre><code>1:安装vue命令行工具vue-cli
+    npm install -g vue-cli
+2:初始化项目
+    vue init webpack vue_bass(要部署vue的文件夹名称)
+3:进入项目
+    cd vue_bass
+4:安装依赖
+    npm install
+5:启动项目
+    npm run dev</code></pre><h2 id="vue文件结构"><a href="#vue文件结构" class="headerlink" title="vue文件结构"></a>vue文件结构</h2><pre><code>————build:构建相关
+————config:配置相关
+————node_modules:组件
+————src:源代码
+    |———assets——静态资源，如css，js
+    |———components——公共组件
+    |———router——路由文件
+    |———App.vue——根组件
+    |———main.js——入口文件
+————static:静态文件
+.babelrc:babel-loader 配置
+.editorconfig:编辑器配置文件
+.gitignore:配置在该文件中的文件列表不会被提交到github或者其他代码仓库上
+.postcssrc.js:一款使用插件去转换CSS的工具
+.index.html:根视图
+.package.json:主要用来定义项目中需要依赖的包，在创建项目的时候会生成，记录项目中所需要的所有模块。
+.package-lock.json:记录当前状态下实际安装的各个npm package的具体来源和版本号。
+.readme.md:说明</code></pre><h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><pre><code>Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。所有 Vue.js 的模板都是合法的 HTML ，所以能被遵循规范的浏览器和 HTML 解析器解析。
+在底层的实现上，Vue 将模板编译成虚拟 DOM 渲染函数。结合响应系统，Vue 能够智能地计算出最少需要重新渲染多少组件，并把 DOM 操作次数减到最少。</code></pre><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><pre><code>未完待续</code></pre>
       </div>
     </div>
   </div>
@@ -73,12 +101,12 @@
 <div class="lx-navigation">
 	<div class="lx-cover prev lx-cover-sm" style="background-image: url(/images/footer_1.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2019/12/03/学习vue-1st/">
+		<a class="copy" href="#">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Next</span>
-						<h3>学习vue 1st</h3>
+						<h3>没有更新的文章</h3>
 					</div>
 				</div>
 			</div>
@@ -86,12 +114,12 @@
 	</div>
         <div class="lx-cover next lx-cover-sm" style="background-image: url(/images/footer_2.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2019/11/19/传感器数据平台的开发1th/">
+		<a class="copy" href="/2019/11/21/传感器数据平台的开发2th/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Prev</span>
-						<h3>传感器数据平台的开发1th</h3>
+						<h3>传感器数据平台的开发2th</h3>
 					</div>
 				</div>
 			</div>
